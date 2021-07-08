@@ -44,4 +44,4 @@ def list():
         json.dump(entries, f)
     return redirect("/list")
 
-run(host="0.0.0.0")
+run(host="0.0.0.0", port=8282)

